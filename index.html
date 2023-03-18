@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- START LOADING -->
+    <div class="loading">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+    <!-- END LOADING -->
+
+    <!-- START SIDE BAR -->
+    <div class="side-meals min-vh-100 d-flex">
+        <div class="sideBarNav-tab  d-flex flex-column justify-content-between min-vh-100 p-4 ">
+            <div class="sideBar-links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li data-code="Search" id="search" class="py-2 position-relative">Search</li>
+                    <li data-code="category" id="Category" class="py-2 position-relative">Categories</li>
+                    <li data-code="area" id="area" class="py-2 position-relative">Area</li>
+                    <li data-code="ingredient" id="ingredients" class="py-2 position-relative">Ingredients</li>
+                    <li data-code="contact" id="contact" class="py-2 position-relative">Contact Us</li>
+                </ul>
+            </div>
+            <div class="sideBartNav-footer">
+                <div class="sideBar-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer">
+                    <p class="mb-0">Copyright Â© 2019 All Rights </p>
+                    <p>Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="sideBar-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img class="logo" src="images/logo.png" alt="" srcset="">
+            <i class="fa-solid btn-icon fa-align-justify fa-2x"></i>
+            <!-- <i class="fa-solid btn fa-2x fa-x"></i> -->
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+    <!-- END SIDE BAR -->
+
+    <!-- START SEARCH -->
+    <div class="container w-75" id="search-meal">
+        <!-- <div class="row py-4"  id="search">
+            <div class="col-md-6">
+                <input type="text" placeholder="Search By Name" class="form-control bg-transparent text-white">
+            </div>
+            <div class="col-md-6">
+                <input type="text" placeholder="Search By First Letter" class="form-control bg-transparent text-white">
+            </div>
+        </div> -->
+    </div>
+    <!-- END SEARCH -->
+
+    <!-- START HOME -->
+    <section class="min-vh-100">
+        <div class="inner-loading position-fixed top-0 bottom-0 start-0 end-0 bg-black d-none justify-content-center align-items-center">
+            <span class="loader"></span>
+        </div>
+        <div class="container">
+            <div class="row py-5 g-4" id="meals">
+                <!-- START MEAL -->
+                <!-- <div class="col-md-3">
+                    <div class="meal position-relative overflow-hidden rounded-2">
+                        <img src="images/58oia61564916529.jpg" class="w-100" alt="">
+                        <div class="layer position-absolute d-flex align-items-center text-black p-2">
+                            <h3>Corba</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="meal position-relative overflow-hidden rounded-2">
+                        <img src="images/tkxquw1628771028.jpg" class="w-100" alt="">
+                        <div class="layer position-absolute d-flex align-items-center text-black p-2">
+                            <h3>Burek</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="meal position-relative overflow-hidden rounded-2">
+                        <img src="images/g046bb1663960946.jpg" class="w-100" alt="">
+                        <div class="layer position-absolute d-flex align-items-center text-black p-2">
+                            <h3>Sushi</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="meal position-relative overflow-hidden rounded-2">
+                        <img src="images/mlchx21564916997.jpg" class="w-100" alt="">
+                        <div class="layer position-absolute d-flex align-items-center text-black p-2">
+                            <h3>Kumpir</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- END MEAL -->
+
+                <!-- START CATEGORY -->
+                <!-- <div class="col-md-3">
+                    <div class="meal position-relative overflow-hidden rounded-2">
+                        <img src="images/beef.png" class="w-100" alt="">
+                        <div class="layer position-absolute text-center text-black p-2">
+                            <h3>Beef</h3>
+                            <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="meal position-relative overflow-hidden rounded-2">
+                        <img src="images/chicken.png" class="w-100" alt="">
+                        <div class="layer position-absolute text-center text-black p-2">
+                            <h3>Chicken</h3>
+                            <p>Chicken is a type of domesticated fowl, a subspecies of the red junglefowl. It is one of the most common</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="meal position-relative overflow-hidden rounded-2">
+                        <img src="images/dessert.png" class="w-100" alt="">
+                        <div class="layer position-absolute text-center text-black p-2">
+                            <h3>Dessert</h3>
+                            <p>Dessert is a course that concludes a meal. The course usually consists of sweet foods, such as confections dishes or</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="meal position-relative overflow-hidden rounded-2">
+                        <img src="images/lamb.png" class="w-100" alt="">
+                        <div class="layer position-absolute text-center text-black p-2">
+                            <h3>Lamb</h3>
+                            <p>Lamb, hogget, and mutton are the meat of domestic sheep (species Ovis aries) at different ages.A sheep in its first</p>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- END CATEGORY -->
+
+                <!-- START AREA-->
+                <!-- <div class="col-md-3">
+                    <div class="text-center">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>American</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>British</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Canadian</h3>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <i class="fa-solid fa-house-laptop fa-4x"></i>
+                        <h3>Chinese</h3>
+                    </div>
+                </div> -->
+                <!-- END AREA-->
+
+                <!-- START INTEGRATE -->
+                <!-- <div class="col-md-3">
+                    <div class="rounded-2 text-center">
+                        <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                        <h3>Chicken</h3>
+                        <p>The chicken is a type of domesticated fowl, a subspecies of the red junglefowl (Gallus gallus). It is one of</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="rounded-2 text-center">
+                        <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                        <h3>Salmon</h3>
+                        <p>Salmon is the common name for several species of ray-finned fish in the family Salmonidae. Other fish in the same</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="rounded-2 text-center">
+                        <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                        <h3>Beef</h3>
+                        <p>Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="rounded-2 text-center">
+                        <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                        <h3>Pork</h3>
+                        <p>Pork is the culinary name for the flesh of a domestic pig (Sus scrofa domesticus). It is the most commonly</p>
+                    </div>
+                </div> -->
+                <!-- END INTEGRATE -->
+              
+                <!-- START contact -->
+                <!-- <div class="contact  d-flex align-items-center justify-content-center">
+                    <div class="contain w-75 m-auto text-center">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <input id="nameInput" type="text" class="form-control" placeholder="Enter Your Name">
+                                <div id="nameAlert" class="w-100 mt-2 alert-danger d-none rounded-2">
+                                    <p class=" text-center p-3">Special characters and numbers not allowed</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="emailInput" type="email" class="form-control" placeholder="Enter Your e-mail">
+                                <div id="emailAlert" class="w-100 mt-2 alert-danger d-none rounded-2">
+                                    <p class=" text-center p-3">Email not valid</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="phoneInput" type="text" class="form-control" placeholder="Enter Your phone">
+                                <div id="phoneAlert" class="w-100 mt-2 alert-danger d-none rounded-2">
+                                    <p class=" text-center p-3">Enter valid phone number</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="ageInput" type="email" class="form-control" placeholder="Enter Your age">
+                                <div id="ageAlert" class="w-100 mt-2 alert-danger d-none rounded-2">
+                                    <p class=" text-center p-3">Email valid age</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="passwordInput" type="text" class="form-control" placeholder="Enter Your password">
+                                <div id="passwordAlert" class="w-100 mt-2 alert-danger d-none rounded-2">
+                                    <p class=" text-center p-3">Enter valid password *Minimum eight characters, at least one letter and one number</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <input id="repasswordInput" type="email" class="form-control" placeholder="Repassword">
+                                <div id="repasswordInput" class="w-100 mt-2 alert-danger d-none rounded-2">
+                                    <p class=" text-center p-3">Enter valid repassword</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="submitBtn" disabled class="btn btn-outline-danger px-2 mt-3">Submit</button>
+
+                    </div>
+                </div> -->
+                <!-- END contact -->
+
+                <!-- <div class="container">
+                    <div class="row py-5 g-4 " id="mealDetails">
+            <div class="col-md-4">
+                        <img class="w-100 rounded-3" src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" alt="">
+                            <h2>Corba</h2>
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Instructions</h2>
+                        <p>Pick through your lentils for any foreign debris, rinse them 2 or 3 times, drain, and set aside.  Fair warning, this will probably turn your lentils into a solid block that you’ll have to break up later
+        In a large pot over medium-high heat, sauté the olive oil and the onion with a pinch of salt for about 3 minutes, then add the carrots and cook for another 3 minutes.
+        Add the tomato paste and stir it around for around 1 minute. Now add the cumin, paprika, mint, thyme, black pepper, and red pepper as quickly as you can and stir for 10 seconds to bloom the spices. Congratulate yourself on how amazing your house now smells.
+        Immediately add the lentils, water, broth, and salt. Bring the soup to a (gentle) boil.
+        After it has come to a boil, reduce heat to medium-low, cover the pot halfway, and cook for 15-20 minutes or until the lentils have fallen apart and the carrots are completely cooked.
+        After the soup has cooked and the lentils are tender, blend the soup either in a blender or simply use a hand blender to reach the consistency you desire. Taste for seasoning and add more salt if necessary.
+        Serve with crushed-up crackers, torn up bread, or something else to add some extra thickness.  You could also use a traditional thickener (like cornstarch or flour), but I prefer to add crackers for some texture and saltiness.  Makes great leftovers, stays good in the fridge for about a week.</p>
+                        <h3><span class="fw-bolder">Area : </span>Turkish</h3>
+                        <h3><span class="fw-bolder">Category : </span>Side</h3>
+                        <h3>Recipes :</h3>
+                        <ul class="list-unstyled d-flex g-3 flex-wrap">
+                            <li class="alert alert-info m-2 p-1">1 cup  Lentils</li><li class="alert alert-info m-2 p-1">1 large Onion</li><li class="alert alert-info m-2 p-1">1 large Carrots</li><li class="alert alert-info m-2 p-1">1 tbs Tomato Puree</li><li class="alert alert-info m-2 p-1">2 tsp Cumin</li><li class="alert alert-info m-2 p-1">1 tsp  Paprika</li><li class="alert alert-info m-2 p-1">1/2 tsp Mint</li><li class="alert alert-info m-2 p-1">1/2 tsp Thyme</li><li class="alert alert-info m-2 p-1">1/4 tsp Black Pepper</li><li class="alert alert-info m-2 p-1">1/4 tsp Red Pepper Flakes</li><li class="alert alert-info m-2 p-1">4 cups  Vegetable Stock</li><li class="alert alert-info m-2 p-1">1 cup  Water</li><li class="alert alert-info m-2 p-1">Pinch Sea Salt</li>
+                        </ul>
+        
+                        <h3>Tags :</h3>
+                        <ul class="list-unstyled d-flex g-3 flex-wrap">
+                            
+                <li class="alert alert-danger m-2 p-1">Soup</li>
+                        </ul>
+        
+                        <a target="_blank" href="https://findingtimeforcooking.com/main-dishes/red-lentil-soup-corba/" class="btn btn-success">Source</a>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=VVnZd8A84z4" class="btn btn-danger">Youtube</a>
+                    </div></div>
+                </div> -->
+    <!-- END HOME -->
+    </div>
+    </div>
+    </section>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
